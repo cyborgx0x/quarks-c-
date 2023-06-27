@@ -1,20 +1,20 @@
 ﻿quarks
-
+1.0.0.0
 
 winexe
 C#
 .cs
-D:\quarks\quarks\obj\Debug\net6.0-windows\
+d:\quarks\quarks\obj\Debug\net6.0-windows\
 quarks
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-D:\quarks\quarks\App.xaml
+d:\quarks\quarks\App.xaml
 11407045341
 
-3-1233169557
+5-2086576393
 1941675070116
 MainWindow.xaml;
 
-False
+True
 
