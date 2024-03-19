@@ -3,13 +3,67 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:quarks"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <StackPanel>
-            <TextBox x:Name="InputTextBox" />
-            <Button Content="Click me" Click="Button_Click" />
+
+    <Window.Resources>
+        <SolidColorBrush x:Key="PrimaryBackground" Color="#FF333740"/>
+        <SolidColorBrush x:Key="SecondaryBackground" Color="#FF434A54"/>
+        <SolidColorBrush x:Key="PrimaryForeground" Color="#FFFFFFFF"/>
+        <SolidColorBrush x:Key="AccentColor" Color="#FF0066CC"/>
+        <SolidColorBrush x:Key="HoverColor" Color="#FF0057a6"/>
+        
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource AccentColor}"/>
+            <Setter Property="Foreground" Value="{StaticResource PrimaryForeground}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="{StaticResource HoverColor}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Padding" Value="5"/>
+        </Style>
+
+        <Style TargetType="StackPanel">
+            <Setter Property="Background" Value="{StaticResource PrimaryBackground}"/>
+        </Style>
+
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="{StaticResource PrimaryForeground}"/>
+            <Setter Property="Margin" Value="10,0"/>
+        </Style>
+    </Window.Resources>
+
+    <DockPanel>
+        <!-- Menu -->
+        <StackPanel DockPanel.Dock="Left" Width="160">
+            <Button Content="Menu Item 1"/>
+            <Button Content="Menu Item 2"/>
+            <Button Content="Menu Item 3"/>
         </StackPanel>
-    </Grid>
+
+        <!-- Content -->
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- Input and button -->
+            <DockPanel Grid.Row="0" LastChildFill="True">
+                <TextBlock Text="Enter URL:" VerticalAlignment="Center" DockPanel.Dock="Left" />
+                <TextBox x:Name="InputTextBox" DockPanel.Dock="Top" />
+                <Button Content="Scan" Width="80" DockPanel.Dock="Right" Click="Button_Click" />
+            </DockPanel>
+        </Grid>
+    </DockPanel>
 </Window>

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "a5Qj8PEE8mKf7IBZ3VVFvr3zkHTZEsJPtVTuQ4flZRtZFKxhZm8I7KFHUO898Lw4TJ7NC/s10pwz1a9PAaKCew==",
+  "dgSpecHash": "WWPJUYxUTZ+6Vp+uzMPDH1rMo1q35JIYR7jARLxMmu23+3LpJypOZIO/F6qT4Zvt1EpS+mJdM4woE6C0p4FXNw==",
   "success": true,
-  "projectFilePath": "D:\\quarks\\quarks\\quarks.csproj",
+  "projectFilePath": "D:\\work\\quarks-cs\\quarks.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
