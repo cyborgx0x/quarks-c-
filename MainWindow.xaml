@@ -1,62 +1,67 @@
 ﻿<Window x:Class="quarks.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="MainWindow" Height="450" Width="800">
 
     <Window.Resources>
-        <SolidColorBrush x:Key="PrimaryBackground" Color="#FF333740"/>
-        <SolidColorBrush x:Key="SecondaryBackground" Color="#FF434A54"/>
-        <SolidColorBrush x:Key="PrimaryForeground" Color="#FFFFFFFF"/>
-        <SolidColorBrush x:Key="AccentColor" Color="#FF0066CC"/>
-        <SolidColorBrush x:Key="HoverColor" Color="#FF0057a6"/>
-        
+        <SolidColorBrush x:Key="PrimaryBackground" Color="#FF333740" />
+        <SolidColorBrush x:Key="SecondaryBackground" Color="#FF434A54" />
+        <SolidColorBrush x:Key="PrimaryForeground" Color="#FFFFFFFF" />
+        <SolidColorBrush x:Key="AccentColor" Color="#FF0066CC" />
+        <SolidColorBrush x:Key="HoverColor" Color="#FF0057a6" />
+
         <Style TargetType="Button">
-            <Setter Property="Background" Value="{StaticResource AccentColor}"/>
-            <Setter Property="Foreground" Value="{StaticResource PrimaryForeground}"/>
-            <Setter Property="BorderThickness" Value="0"/>
-            <Setter Property="Padding" Value="10,5"/>
-            <Setter Property="Margin" Value="10"/>
-            <Setter Property="HorizontalContentAlignment" Value="Center"/>
-            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Background" Value="{StaticResource AccentColor}" />
+            <Setter Property="Foreground" Value="{StaticResource PrimaryForeground}" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Padding" Value="10,5" />
+            <Setter Property="Margin" Value="10" />
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="{StaticResource HoverColor}"/>
+                    <Setter Property="Background" Value="{StaticResource HoverColor}" />
                 </Trigger>
             </Style.Triggers>
         </Style>
-        
+
         <Style TargetType="TextBox">
-            <Setter Property="Margin" Value="10"/>
-            <Setter Property="Padding" Value="5"/>
+            <Setter Property="Margin" Value="10" />
+            <Setter Property="Padding" Value="5" />
         </Style>
 
         <Style TargetType="StackPanel">
-            <Setter Property="Background" Value="{StaticResource PrimaryBackground}"/>
+            <Setter Property="Background" Value="{StaticResource PrimaryBackground}" />
         </Style>
 
         <Style TargetType="TextBlock">
-            <Setter Property="Foreground" Value="{StaticResource PrimaryForeground}"/>
-            <Setter Property="Margin" Value="10,0"/>
+            <Setter Property="Foreground" Value="{StaticResource PrimaryForeground}" />
+            <Setter Property="Margin" Value="10,0" />
         </Style>
     </Window.Resources>
 
     <DockPanel>
         <!-- Menu -->
-        <StackPanel DockPanel.Dock="Left" Width="160">
-            <Button Content="Menu Item 1"/>
-            <Button Content="Menu Item 2"/>
-            <Button Content="Menu Item 3"/>
+        <StackPanel DockPanel.Dock="Left" Width="200">
+            <Button Content="Targets" Click="TargetsButton_Click" />
+            <Button Content="Templates" Click="TemplatesButton_Click" />
+            <Button Content="Settings" Click="SettingsButton_Click" />
+
+
         </StackPanel>
 
         <!-- Content -->
-        <Grid>
+        <Grid DockPanel.Dock="Right">
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
+            <TextBlock x:Name="MainContentTextBlock" Grid.Row="1" TextWrapping="Wrap" Padding="10"
+                Background="#FF333740" />
+
 
             <!-- Input and button -->
             <DockPanel Grid.Row="0" LastChildFill="True">
