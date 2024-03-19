@@ -39,3 +39,9 @@ D:\work\quarks-cs\obj\Debug\net6.0-windows\refint\quarks.dll
 D:\work\quarks-cs\obj\Debug\net6.0-windows\quarks.pdb
 D:\work\quarks-cs\obj\Debug\net6.0-windows\quarks.genruntimeconfig.cache
 D:\work\quarks-cs\obj\Debug\net6.0-windows\ref\quarks.dll
+D:\work\quarks-cs\obj\Debug\net6.0-windows\Views\CreateTargetView.baml
+D:\work\quarks-cs\obj\Debug\net6.0-windows\Views\EditTargetView.baml
+D:\work\quarks-cs\obj\Debug\net6.0-windows\Views\TargetsView.baml
+D:\work\quarks-cs\obj\Debug\net6.0-windows\Views\CreateTargetView.g.cs
+D:\work\quarks-cs\obj\Debug\net6.0-windows\Views\EditTargetView.g.cs
+D:\work\quarks-cs\obj\Debug\net6.0-windows\Views\TargetsView.g.cs

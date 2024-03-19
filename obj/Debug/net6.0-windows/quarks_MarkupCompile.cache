@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 D:\work\quarks-cs\App.xaml
-11407045341
+4-1771741701
 
-3-1233169557
+101232099823
 194-2005446070
-MainWindow.xaml;
+MainWindow.xaml;Views\CreateTargetView.xaml;Views\EditTargetView.xaml;Views\TargetsView.xaml;
 
 False
 

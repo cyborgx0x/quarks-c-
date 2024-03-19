@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("quarks")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+75f5c2c38e66ddb65fb1e8c200801a7fcde57245")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3765183a709fd0d0c799a63c48ab0163be7b7937")]
 [assembly: System.Reflection.AssemblyProductAttribute("quarks")]
 [assembly: System.Reflection.AssemblyTitleAttribute("quarks")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

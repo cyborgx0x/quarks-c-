@@ -62,13 +62,15 @@
             <TextBlock x:Name="MainContentTextBlock" Grid.Row="1" TextWrapping="Wrap" Padding="10"
                 Background="#FF333740" />
 
-
             <!-- Input and button -->
-            <DockPanel Grid.Row="0" LastChildFill="True">
+            <DockPanel Grid.Row="0">
                 <TextBlock Text="Enter URL:" VerticalAlignment="Center" DockPanel.Dock="Left" />
                 <TextBox x:Name="InputTextBox" DockPanel.Dock="Top" />
                 <Button Content="Scan" Width="80" DockPanel.Dock="Right" Click="Button_Click" />
             </DockPanel>
+        
+            <!-- ContentControl for displaying the main content, taking up the remaining space -->
+            <ContentControl x:Name="MainContentControl" Grid.Row="1"/>
         </Grid>
     </DockPanel>
 </Window>

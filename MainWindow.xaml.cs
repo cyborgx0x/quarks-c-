@@ -2,6 +2,8 @@
 using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
+using quarks.Views;
+using quarks.ViewModels;
 
 namespace quarks
 {
@@ -22,7 +24,7 @@ namespace quarks
 
         private void TargetsButton_Click(object sender, RoutedEventArgs e)
         {
-            UpdateMainContent("Targets management view");
+            ShowTargetsView();
         }
 
         private void TemplatesButton_Click(object sender, RoutedEventArgs e)
@@ -53,6 +55,16 @@ namespace quarks
             Process process = new Process { StartInfo = startInfo };
             process.Start();
             // You can handle the output and errors if redirection is enabled
+        }
+
+        private void ShowTargetsView()
+        {
+            var viewModel = new TargetsViewModel(); // Assuming dependency injection is not being used
+            var view = new TargetsView
+            {
+                DataContext = viewModel
+            };
+            MainContentControl.Content = view; // Assuming you have a ContentControl named MainContentControl
         }
     }
 }
